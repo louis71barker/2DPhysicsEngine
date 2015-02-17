@@ -9,5 +9,5 @@ LIBS += -lGL -lGLU -lglut
 
 DEFINES +=NGL_DEBUG
 
-LIBS +=  -L/$(HOME)/NGL/lib -l NGL
-INCLUDEPATH += $$(HOME)/NGL/include/
+#LIBS +=  -L/$(HOME)/NGL/lib -l NGL
+#INCLUDEPATH += $$(HOME)/NGL/include/

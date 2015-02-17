@@ -2,7 +2,7 @@
 #define BALL_H__
 
 #include "src/ball.cpp"
-#include <ngl/Vec2.h>
+//#include <ngl/Vec2.h>
 
 
 
@@ -18,7 +18,7 @@ public:
     void getPos();
 
 protected:
-    ngl::Vec2 m_pos;
+//    ngl::Vec2 m_pos;
 
 };
 

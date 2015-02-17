@@ -1,13 +1,13 @@
 #ifndef WINDOW_H__
 #define WINDOW_H__
-#include <QtGui/QWindow>
+//#include <QtGui/QWindow>
 
 #include "src/window.cpp"
 
 
-class Window : QWindow
+class Window
 {
-    Q_OBJECT
+   // Q_OBJECT
 public:
 
 

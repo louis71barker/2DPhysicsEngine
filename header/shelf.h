@@ -1,7 +1,7 @@
 #ifndef SHELF_H__
 #define SHELF_H__
 
-#include <ngl/Vec2.h>
+//#include <ngl/Vec2.h>
 
 
 

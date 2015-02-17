@@ -7,6 +7,7 @@
 
 void shelf::getShelpCo()
 {
+    int quit = 1;
     while(!quit)
     {
         SDL_Event e;
@@ -15,6 +16,7 @@ void shelf::getShelpCo()
         {
             if(e.type == SDL_MOUSEBUTTONUP)
             {
+                std::cout<<"button up"<<"/n";
                 if(e.button.button == SDL_BUTTON_LEFT)
                 {
                     xCoorGained = true;
