@@ -7,7 +7,7 @@
 #include <GL/glut.h>
 #include <vector>
 #include <time.h>
-#include <header/scene.h>
+#include "header/scene.h"
 
 
 

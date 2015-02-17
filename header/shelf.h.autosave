@@ -18,6 +18,7 @@ public:
 
 
 protected:
+    ngl::Vec2 m_pos;
 
 };
 

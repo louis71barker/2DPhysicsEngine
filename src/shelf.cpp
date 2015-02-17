@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cstdlib>
 #include <SDL.h>
-#include <header/shelf.h>
+#include "header/shelf.h"
 
 
 
-void /*shelf::*/getShelpCo()
+void shelf::getShelpCo()
 {
     while(!quit)
     {
@@ -27,4 +27,9 @@ void /*shelf::*/getShelpCo()
             }
         }
     }
+}
+
+void shelf::draw()
+{
+    std::cout<<"draw function"<<"/n";
 }
