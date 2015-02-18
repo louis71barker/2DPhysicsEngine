@@ -4,6 +4,7 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
+#include "header/shelf.h"
 
 
 
@@ -39,6 +40,7 @@ void windowOps()
     SDL_GetDisplayBounds(0,&rect);
     SDL_Window *win;
     win=SDL_CreateWindow("2D Phyics engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, rect.w/2, rect.h/2, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
+    shelf s;
 
    //error checking to make sure window is available to be opened
     if (!win)
@@ -60,6 +62,7 @@ void windowOps()
     gluLookAt(0,0,2,0,0,0,0,1,0);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_NORMALIZE);
+    glClearColor( 255, 255 ,255, 1 );
 
     int quit = 0;
     while(!quit)
@@ -89,6 +92,30 @@ void windowOps()
                     }
                 }
                 break;
+            case SDL_MOUSEBUTTONDOWN:
+                {
+                    if(e.button.button == SDL_BUTTON_LEFT)
+                    {
+                        s.xCoorGained = true;
+
+                        if (s.xCoorGained == true && s.yCoorGained == false)
+                        {
+                            s.yCoorGained = true;
+
+                        }
+                        if (s.xCoorGained == true && s.yCoorGained == true)
+                        {
+                            s.coorGained = true;
+                            s.drawTrigger = true;
+                            s.pointNum++;
+                            s.getShelpCo();
+                            std::cout<<"boom coor"<<"\n";
+
+                        }
+                    }
+                 }
+                break;
+
             }
 
         }

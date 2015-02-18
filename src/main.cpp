@@ -13,8 +13,7 @@
 
 int main ()
 {
-    shelf s;
+    //shelf s;
     windowOps();
-    s.getShelpCo();
 
 }
