@@ -109,7 +109,7 @@ void windowOps()
                             s.drawTrigger = true;
                             s.pointNum++;
                             s.getShelpCo();
-                            std::cout<<"boom coor"<<"\n";
+                            std::cout<<s.pointNum<<"\n";
 
                         }
                     }

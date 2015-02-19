@@ -8,11 +8,11 @@
 class shelf
 {
 public:
-    float pos1 [2], pos2[2], pointsDrawn;
-    int pointNum = 0;
+    float pos1 [3], pos2[3], pointsDrawn;
+    int pointNum = 1;
 
     bool xCoorGained, yCoorGained, coorGained, drawLine, pos1Drawn, pointsGiven;
-    bool drawTrigger = true;
+    bool drawTrigger;
 
     //shelf(float x, float y) : pos[0].x = x, pos[0].y = y, pos[1].x = x, pos[1].y = y;{}
     void draw();
