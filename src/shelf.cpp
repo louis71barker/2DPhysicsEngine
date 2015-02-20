@@ -16,10 +16,12 @@ void shelf::getShelpCo()
     //pos position[2];
 //    std::cout<<"function"<<"\n";
 
+    std::cout << _rect.w << " " << _rect.h << "\n";
     if ( !(pointNum % 2))
     {
-        pos2[1] = -(((float) x / (float)_rect.w)*2 - 1);
-        pos2[2] = -(((float) y / (float)_rect.h)*2 - 1);
+        pos2[1] = (((float) x * 2.0 / (float)_rect.w)*200.0 - 100);
+        pos2[2] = -(((float) y * 2.0 / (float)_rect.w)*200.0 - 100);
+        std::cout << pos2[1] << " " << pos2[2] << "\n";
 
 
     }
@@ -29,10 +31,11 @@ void shelf::getShelpCo()
         if (drawTrigger == true)
         {
 
-            pos1[1] = -(((float) x / (float)_rect.w)*2 - 1);
-            pos1[2] = -(((float) y / (float)_rect.h)*2 - 1);
-            pointsGiven = true;
-            draw();
+            pos1[1] = (((float) x * 2.0 / (float)_rect.w)*200.0 - 100);
+            pos1[2] = -(((float) y * 2.0 / (float)_rect.w)*200.0 - 100);
+            pointsDrawn = true;
+            std::cout<<"boomboop"<<"\n";
+
 
 
 
@@ -56,19 +59,17 @@ void shelf::getShelpCo()
 
 void shelf::draw()
 {
-    if (pointNum >= 2)
+    if (pointsDrawn == true/*pointNum >= 2*/)
     {
-        float sXM = 9.3f;
-        float sYM = 7.49f;
-        std::cout<<pointNum<<"\n";
-        std::cout<< pos1[1]<< "    x1" <<"\n"<< pos1[2]<< "    y1 " <<"\n";
-        std::cout<< pos2[1]<< "    x2" <<"\n"<< pos2[2]<< "    y2 " <<"\n";
+        //std::cout<<pointNum<<"\n";
+        //std::cout<< pos1[1]<< "    x1" <<"\n"<< pos1[2]<< "    y1 " <<"\n";
+        //std::cout<< pos2[1]<< "    x2" <<"\n"<< pos2[2]<< "    y2 " <<"\n";
         glPushMatrix();
         glBegin(GL_LINE_STRIP);
 
         glColor3f(255.0f,0.0f,0.0f);
-        glVertex2d(pos1[1]*sXM,pos1[2]*sYM);
-        glVertex2d(pos2[1]*sXM,pos2[2]*sYM);
+        glVertex2f(pos1[1],pos1[2]);
+        glVertex2f(pos2[1],pos2[2]);
 
 
         glEnd();
@@ -78,8 +79,9 @@ void shelf::draw()
                         glVertex2f(0.5f,0.5f/*-sXM*pos1[1], sYM*pos1[2]*/);
 
         glPopMatrix();
-        std::cout<<"draw"<<"\n";
-        pointNum = 1;
+        glEnd();
+        //std::cout<<"draw"<<"\n";
+        //pointNum = 1;
         drawTrigger = false;
     }
 }

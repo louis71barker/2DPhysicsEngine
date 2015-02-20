@@ -7,7 +7,7 @@
 
 class Window
 {
-   // Q_OBJECT
+
 public:
 
 
